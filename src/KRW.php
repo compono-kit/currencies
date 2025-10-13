@@ -23,6 +23,6 @@ class KRW implements RepresentsCurrency
 
 	public function equals( RepresentsCurrency $other ): bool
 	{
-		return $other instanceof self;
+		return $this->getIsoCode() === $other->getIsoCode();
 	}
 }
