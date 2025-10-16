@@ -1,14 +1,4 @@
 services:
-  currencies_lib:
-    build:
-      dockerfile: Dockerfile
-      context: .docker/php
-    container_name: currencies_lib
-    restart: no
-    working_dir: /app
-    volumes:
-      - ./:/app
-
   currencies_composer:
     build:
       dockerfile: Dockerfile

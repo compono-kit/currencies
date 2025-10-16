@@ -2,10 +2,13 @@
 
 namespace ComponoKit\Money\Currencies;
 
+use ComponoKit\Money\Currencies\Traits\RepresentingCurrency;
 use ComponoKit\Money\Interfaces\RepresentsCurrency;
 
 class ISK implements RepresentsCurrency
 {
+	use RepresentingCurrency;
+
 	public function getIsoCode(): string
 	{
 		return 'ISK';
@@ -19,10 +22,5 @@ class ISK implements RepresentsCurrency
 	public function getMinorUnitFactor(): int
 	{
 		return 1;
-	}
-
-	public function equals( RepresentsCurrency $other ): bool
-	{
-		return $this->getIsoCode() === $other->getIsoCode();
 	}
 }

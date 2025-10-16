@@ -2,10 +2,13 @@
 
 namespace ComponoKit\Money\Currencies;
 
+use ComponoKit\Money\Currencies\Traits\RepresentingCurrency;
 use ComponoKit\Money\Interfaces\RepresentsCurrency;
 
 class ILS implements RepresentsCurrency
 {
+	use RepresentingCurrency;
+
 	public function getIsoCode(): string
 	{
 		return 'ILS';
@@ -19,10 +22,5 @@ class ILS implements RepresentsCurrency
 	public function getMinorUnitFactor(): int
 	{
 		return 100;
-	}
-
-	public function equals( RepresentsCurrency $other ): bool
-	{
-		return $this->getIsoCode() === $other->getIsoCode();
 	}
 }
