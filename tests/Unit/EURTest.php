@@ -1,0 +1,18 @@
+<?php declare(strict_types=1);
+
+namespace ComponoKit\Money\Currencies\Tests\Unit;
+
+use ComponoKit\Money\Currencies\EUR;
+use ComponoKit\Money\Currencies\USD;
+
+class EURTest extends AbstractCurrencyTest
+{
+	public function testCurrency()
+	{
+		$currency = new EUR();
+		$this->assertCurrencyProperties( $currency, 'EUR', '€', 100, 2 );
+
+		$this->assertEqualsBehaviour( $currency, new EUR(), true );
+		$this->assertEqualsBehaviour( $currency, new USD(), false );
+	}
+}
