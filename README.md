@@ -1,4 +1,4 @@
-# currencies
+# Currencies
 
 Implementations for the currency interface from the package compono-kit/money-interfaces
 
@@ -11,3 +11,9 @@ e.g. `new EUR()`
 
 * PHP >= 8.0
 * compono-kit/money-interfaces
+
+## 📦 Installation
+
+```bash
+composer require compono-kit/currencies
+```
