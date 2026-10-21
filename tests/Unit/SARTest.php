@@ -5,9 +5,9 @@ namespace ComponoKit\Money\Currencies\Tests\Unit;
 use ComponoKit\Money\Currencies\EUR;
 use ComponoKit\Money\Currencies\SAR;
 
-class SARTest extends AbstractCurrencyTest
+class SARTest extends AbstractCurrencyTestCase
 {
-	public function testCurrency()
+	public function testCurrency(): void
 	{
 		$currency = new SAR();
 		$this->assertCurrencyProperties( $currency, 'SAR', '﷼', 100, 2 );

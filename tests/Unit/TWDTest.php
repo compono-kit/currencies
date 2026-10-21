@@ -5,9 +5,9 @@ namespace ComponoKit\Money\Currencies\Tests\Unit;
 use ComponoKit\Money\Currencies\EUR;
 use ComponoKit\Money\Currencies\TWD;
 
-class TWDTest extends AbstractCurrencyTest
+class TWDTest extends AbstractCurrencyTestCase
 {
-	public function testCurrency()
+	public function testCurrency(): void
 	{
 		$currency = new TWD();
 		$this->assertCurrencyProperties( $currency, 'TWD', 'NT$', 100, 2 );

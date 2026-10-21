@@ -5,9 +5,9 @@ namespace ComponoKit\Money\Currencies\Tests\Unit;
 use ComponoKit\Money\Currencies\EUR;
 use ComponoKit\Money\Currencies\RON;
 
-class RONTest extends AbstractCurrencyTest
+class RONTest extends AbstractCurrencyTestCase
 {
-	public function testCurrency()
+	public function testCurrency(): void
 	{
 		$currency = new RON();
 		$this->assertCurrencyProperties( $currency, 'RON', 'lei', 100, 2 );

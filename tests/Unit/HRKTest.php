@@ -5,9 +5,9 @@ namespace ComponoKit\Money\Currencies\Tests\Unit;
 use ComponoKit\Money\Currencies\EUR;
 use ComponoKit\Money\Currencies\HRK;
 
-class HRKTest extends AbstractCurrencyTest
+class HRKTest extends AbstractCurrencyTestCase
 {
-	public function testCurrency()
+	public function testCurrency(): void
 	{
 		$currency = new HRK();
 		$this->assertCurrencyProperties( $currency, 'HRK', 'kn', 100, 2 );

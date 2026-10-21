@@ -5,9 +5,9 @@ namespace ComponoKit\Money\Currencies\Tests\Unit;
 use ComponoKit\Money\Currencies\EUR;
 use ComponoKit\Money\Currencies\MKD;
 
-class MKDTest extends AbstractCurrencyTest
+class MKDTest extends AbstractCurrencyTestCase
 {
-	public function testCurrency()
+	public function testCurrency(): void
 	{
 		$currency = new MKD();
 		$this->assertCurrencyProperties( $currency, 'MKD', 'ден', 100, 2 );

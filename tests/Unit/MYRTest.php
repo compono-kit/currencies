@@ -5,9 +5,9 @@ namespace ComponoKit\Money\Currencies\Tests\Unit;
 use ComponoKit\Money\Currencies\EUR;
 use ComponoKit\Money\Currencies\MYR;
 
-class MYRTest extends AbstractCurrencyTest
+class MYRTest extends AbstractCurrencyTestCase
 {
-	public function testCurrency()
+	public function testCurrency(): void
 	{
 		$currency = new MYR();
 		$this->assertCurrencyProperties( $currency, 'MYR', 'RM', 100, 2 );

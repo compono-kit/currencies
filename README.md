@@ -4,7 +4,7 @@ Implementations for the currency interface from the package compono-kit/money-in
 
 ## Requirements
 
-* PHP >= 8.0
+* PHP >= 8.5
 * compono-kit/money-interfaces
 
 ## 📦 Installation

@@ -5,9 +5,9 @@ namespace ComponoKit\Money\Currencies\Tests\Unit;
 use ComponoKit\Money\Currencies\EUR;
 use ComponoKit\Money\Currencies\GEL;
 
-class GELTest extends AbstractCurrencyTest
+class GELTest extends AbstractCurrencyTestCase
 {
-	public function testCurrency()
+	public function testCurrency(): void
 	{
 		$currency = new GEL();
 		$this->assertCurrencyProperties( $currency, 'GEL', '₾', 100, 2 );

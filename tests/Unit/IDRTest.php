@@ -5,9 +5,9 @@ namespace ComponoKit\Money\Currencies\Tests\Unit;
 use ComponoKit\Money\Currencies\EUR;
 use ComponoKit\Money\Currencies\IDR;
 
-class IDRTest extends AbstractCurrencyTest
+class IDRTest extends AbstractCurrencyTestCase
 {
-	public function testCurrency()
+	public function testCurrency(): void
 	{
 		$currency = new IDR();
 		$this->assertCurrencyProperties( $currency, 'IDR', 'Rp', 100, 2 );

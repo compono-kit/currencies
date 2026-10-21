@@ -5,9 +5,9 @@ namespace ComponoKit\Money\Currencies\Tests\Unit;
 use ComponoKit\Money\Currencies\EUR;
 use ComponoKit\Money\Currencies\HUF;
 
-class HUFTest extends AbstractCurrencyTest
+class HUFTest extends AbstractCurrencyTestCase
 {
-	public function testCurrency()
+	public function testCurrency(): void
 	{
 		$currency = new HUF();
 		$this->assertCurrencyProperties( $currency, 'HUF', 'Ft', 1, 0 );

@@ -5,9 +5,9 @@ namespace ComponoKit\Money\Currencies\Tests\Unit;
 use ComponoKit\Money\Currencies\ALL;
 use ComponoKit\Money\Currencies\EUR;
 
-class ALLTest extends AbstractCurrencyTest
+class ALLTest extends AbstractCurrencyTestCase
 {
-	public function testCurrency()
+	public function testCurrency(): void
 	{
 		$currency = new ALL();
 		$this->assertCurrencyProperties( $currency, 'ALL', 'L', 100, 2 );

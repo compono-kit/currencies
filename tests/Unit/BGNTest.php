@@ -5,9 +5,9 @@ namespace ComponoKit\Money\Currencies\Tests\Unit;
 use ComponoKit\Money\Currencies\BGN;
 use ComponoKit\Money\Currencies\EUR;
 
-class BGNTest extends AbstractCurrencyTest
+class BGNTest extends AbstractCurrencyTestCase
 {
-	public function testCurrency()
+	public function testCurrency(): void
 	{
 		$currency = new BGN();
 		$this->assertCurrencyProperties( $currency, 'BGN', 'лв', 100, 2 );

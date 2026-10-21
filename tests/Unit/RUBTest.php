@@ -5,9 +5,9 @@ namespace ComponoKit\Money\Currencies\Tests\Unit;
 use ComponoKit\Money\Currencies\EUR;
 use ComponoKit\Money\Currencies\RUB;
 
-class RUBTest extends AbstractCurrencyTest
+class RUBTest extends AbstractCurrencyTestCase
 {
-	public function testCurrency()
+	public function testCurrency(): void
 	{
 		$currency = new RUB();
 		$this->assertCurrencyProperties( $currency, 'RUB', '₽', 100, 2 );

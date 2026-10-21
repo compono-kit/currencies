@@ -5,9 +5,9 @@ namespace ComponoKit\Money\Currencies\Tests\Unit;
 use ComponoKit\Money\Currencies\EUR;
 use ComponoKit\Money\Currencies\ILS;
 
-class ILSTest extends AbstractCurrencyTest
+class ILSTest extends AbstractCurrencyTestCase
 {
-	public function testCurrency()
+	public function testCurrency(): void
 	{
 		$currency = new ILS();
 		$this->assertCurrencyProperties( $currency, 'ILS', '₪', 100, 2 );

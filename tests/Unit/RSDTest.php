@@ -5,9 +5,9 @@ namespace ComponoKit\Money\Currencies\Tests\Unit;
 use ComponoKit\Money\Currencies\EUR;
 use ComponoKit\Money\Currencies\RSD;
 
-class RSDTest extends AbstractCurrencyTest
+class RSDTest extends AbstractCurrencyTestCase
 {
-	public function testCurrency()
+	public function testCurrency(): void
 	{
 		$currency = new RSD();
 		$this->assertCurrencyProperties( $currency, 'RSD', 'дин', 100, 2 );

@@ -5,9 +5,9 @@ namespace ComponoKit\Money\Currencies\Tests\Unit;
 use ComponoKit\Money\Interfaces\RepresentsCurrency;
 use PHPUnit\Framework\TestCase;
 
-abstract class AbstractCurrencyTest extends TestCase
+abstract class AbstractCurrencyTestCase extends TestCase
 {
-	protected function assertCurrencyProperties( RepresentsCurrency $currency, string $expectedIsoCode, string $expectedSymbol, int $expectedMinorUnitFactor, int $expectedMinorUnit )
+	protected function assertCurrencyProperties( RepresentsCurrency $currency, string $expectedIsoCode, string $expectedSymbol, int $expectedMinorUnitFactor, int $expectedMinorUnit ): void
 	{
 		$this->assertSame( $expectedIsoCode, $currency->getIsoCode() );
 		$this->assertSame( $expectedSymbol, $currency->getSymbol() );
@@ -15,8 +15,8 @@ abstract class AbstractCurrencyTest extends TestCase
 		$this->assertSame( $expectedMinorUnit, $currency->getMinorUnit() );
 	}
 
-	protected function assertEqualsBehaviour( $currency1, $currency2, bool $expected )
+	protected function assertEqualsBehaviour( RepresentsCurrency $currency, RepresentsCurrency $anotherCurrency, bool $expected ): void
 	{
-		$this->assertSame( $expected, $currency1->equals( $currency2 ) );
+		$this->assertSame( $expected, $currency->equals( $anotherCurrency ) );
 	}
 }

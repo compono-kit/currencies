@@ -5,9 +5,9 @@ namespace ComponoKit\Money\Currencies\Tests\Unit;
 use ComponoKit\Money\Currencies\CZK;
 use ComponoKit\Money\Currencies\EUR;
 
-class CZKTest extends AbstractCurrencyTest
+class CZKTest extends AbstractCurrencyTestCase
 {
-	public function testCurrency()
+	public function testCurrency(): void
 	{
 		$currency = new CZK();
 		$this->assertCurrencyProperties( $currency, 'CZK', 'Kč', 100, 2 );

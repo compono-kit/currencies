@@ -5,9 +5,9 @@ namespace ComponoKit\Money\Currencies\Tests\Unit;
 use ComponoKit\Money\Currencies\EUR;
 use ComponoKit\Money\Currencies\KRW;
 
-class KRWTest extends AbstractCurrencyTest
+class KRWTest extends AbstractCurrencyTestCase
 {
-	public function testCurrency()
+	public function testCurrency(): void
 	{
 		$currency = new KRW();
 		$this->assertCurrencyProperties( $currency, 'KRW', '₩', 1, 0 );

@@ -5,9 +5,9 @@ namespace ComponoKit\Money\Currencies\Tests\Unit;
 use ComponoKit\Money\Currencies\EUR;
 use ComponoKit\Money\Currencies\UAH;
 
-class UAHTest extends AbstractCurrencyTest
+class UAHTest extends AbstractCurrencyTestCase
 {
-	public function testCurrency()
+	public function testCurrency(): void
 	{
 		$currency = new UAH();
 		$this->assertCurrencyProperties( $currency, 'UAH', '₴', 100, 2 );

@@ -5,9 +5,9 @@ namespace ComponoKit\Money\Currencies\Tests\Unit;
 use ComponoKit\Money\Currencies\EUR;
 use ComponoKit\Money\Currencies\THB;
 
-class THBTest extends AbstractCurrencyTest
+class THBTest extends AbstractCurrencyTestCase
 {
-	public function testCurrency()
+	public function testCurrency(): void
 	{
 		$currency = new THB();
 		$this->assertCurrencyProperties( $currency, 'THB', '฿', 100, 2 );
